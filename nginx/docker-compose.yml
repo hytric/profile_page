@@ -1,0 +1,25 @@
+version: '3'
+services:
+    nginx:
+        container_name: nginx
+        build: ./nginx
+        image: profile_page/nginx:v1
+        restart: always
+        network_mode: "host"
+        ports:
+          - "80:80"
+        volumes:
+          - ./profile_page:/srv/profile_page
+          - ./log:/var/log/nginx
+          - ./profile_page/static/:/static
+        depends_on:
+          - django
+    django:
+        container_name: django
+        build: ./profile_page
+        image: profile_page/django:v1
+        restart: always
+        command: uwsgi --ini uwsgi.ini
+        volumes:
+          - ./profile_page:/srv/profile_page
+          - ./log:/var/log/uwsgi
