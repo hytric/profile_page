@@ -21,6 +21,7 @@ from webpage.views import Main, Programing, SeTA
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', Main.as_view()),
     path('Main', Main.as_view()),
     path('Programing', Programing.as_view()),
     path('SeTA', SeTA.as_view()),
