@@ -17,7 +17,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from profile_page import settings
-from webpage.views import Main, Programing, SeTA
+from webpage.views import Main, Programing, SeTA, Facebook_meta
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +25,7 @@ urlpatterns = [
     path('Main', Main.as_view()),
     path('Programing', Programing.as_view()),
     path('SeTA', SeTA.as_view()),
+    path('8o2th7vj1zswq2rfw00oh4syua51s1', Facebook_meta.as_view())
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
