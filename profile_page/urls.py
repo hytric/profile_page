@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from profile_page import settings
 from webpage.views import Main, Programing, SeTA
+from django.contrib.sitemaps.views import sitemap
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Main.as_view()),
     path('Programing', Programing.as_view()),
     path('SeTA', SeTA.as_view()),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
