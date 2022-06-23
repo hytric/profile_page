@@ -25,7 +25,7 @@ urlpatterns = [
     path('', Main.as_view()),
     path('Programing', Programing.as_view()),
     path('SeTA', SeTA.as_view()),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    # path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
