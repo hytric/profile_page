@@ -79,8 +79,13 @@ WSGI_APPLICATION = 'profile_page.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': '44.201.214.32',
+        'NAME': 'profile_page',
+        'USER': 'root',
+        'PASSWORD': 'abc12345',
+        'PORT': '3306',
+        'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
 
