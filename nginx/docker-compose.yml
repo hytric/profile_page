@@ -33,7 +33,9 @@ services:
         - "3306:3306"
       # -e 옵션
       environment:
-        # MYSQL 패스워드 설정 옵션
+        MYSQL_DATABASE: "django"
+        MYSQL_USER: "root"
+        MYSQL_PASSWORD: "abc12345"
         MYSQL_ROOT_PASSWORD: "admin123"
       # 명령어 실행 (한글 인코딩 관련)
       command:
