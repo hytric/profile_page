@@ -1,4 +1,4 @@
 # profile_page
 
 
-url: http://moostudy.duckdns.org/
+~~url: http://moostudy.duckdns.org/~~
